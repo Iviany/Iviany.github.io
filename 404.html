@@ -18,10 +18,26 @@
     <link rel="apple-touch-icon" href="/pwa-192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Loaded off the render path on purpose. Chrome refuses to execute
+         scripts while a stylesheet is still pending, so a font host that
+         HANGS — dropped packets rather than a refusal, which is what a
+         filtered network does — leaves the entire app a blank page: the
+         module graph never runs and React never mounts. `media="print"` keeps
+         the sheet out of the critical path, `onload` promotes it to `all` if
+         and when it actually arrives, and if it never arrives the app renders
+         in the fallback faces instead of not rendering at all. -->
     <link
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <title>InkFlow</title>
     <style>
       /* Boot shell. Painted from this inline block before the JS bundle
@@ -148,8 +164,8 @@
         }
       }
     </style>
-    <script type="module" crossorigin src="/assets/index-DyTaNqmZ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B26CxNIz.css">
+    <script type="module" crossorigin src="/assets/index-CSMJ6ovK.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B6QUMCFp.css">
   </head>
   <body>
     <div id="boot-shell" aria-hidden="true">
