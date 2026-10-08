@@ -23,10 +23,152 @@
       rel="stylesheet"
     />
     <title>InkFlow</title>
-    <script type="module" crossorigin src="/assets/index-DoFvXICQ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BFVjmUQj.css">
+    <style>
+      /* Boot shell. Painted from this inline block before the JS bundle
+         arrives, in the intro curtain's palette and motifs, so a cold load
+         shows the room's light instead of a white page. main.tsx lifts it
+         once React has taken over. Zero requests, system-font stack, no
+         dependency on anything below this point. */
+      html {
+        background: #f4e2e8;
+      }
+
+      #boot-shell {
+        position: fixed;
+        z-index: 400;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            circle at 73% 48%,
+            rgba(255, 255, 255, 0.56),
+            transparent 32%
+          ),
+          linear-gradient(122deg, #fbf5ef 0%, #f4e2e8 45%, #e8dfed 100%);
+        color: #342c36;
+        opacity: 1;
+        transition: opacity 380ms ease;
+        pointer-events: none;
+      }
+
+      #boot-shell.is-dismissed {
+        opacity: 0;
+      }
+
+      #boot-shell .boot-shell__staff {
+        position: absolute;
+        top: 24%;
+        right: 4%;
+        width: 48%;
+        transform: rotate(-3deg);
+      }
+
+      #boot-shell .boot-shell__staff i {
+        display: block;
+        height: 1px;
+        margin-bottom: 34px;
+        background: linear-gradient(
+          90deg,
+          rgba(105, 73, 87, 0),
+          rgba(105, 73, 87, 0.18) 18%,
+          rgba(105, 73, 87, 0.12) 82%,
+          transparent
+        );
+      }
+
+      #boot-shell .boot-shell__note {
+        color: #a9677b;
+        font: 400 clamp(44px, 4.6vw, 76px) / 1 Georgia, serif;
+        text-shadow: 0 14px 30px rgba(130, 78, 98, 0.16);
+      }
+
+      #boot-shell .boot-shell__mark {
+        color: #342c36;
+        font: 400 clamp(26px, 4.4vw, 44px) / 1 Georgia, "Times New Roman",
+          serif;
+        letter-spacing: 0.34em;
+        margin-left: 0.34em; /* recentre against the trailing letter-space */
+        text-indent: 0;
+        white-space: nowrap;
+      }
+
+      #boot-shell .boot-shell__tagline {
+        color: #a15e73;
+        font: italic 400 15px/1.2 Georgia, "Times New Roman", serif;
+      }
+
+      #boot-shell .boot-shell__wait {
+        display: inline-flex;
+        gap: 7px;
+        margin-top: 2px;
+      }
+
+      #boot-shell .boot-shell__wait i {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #a9677b;
+        animation: boot-shell-dot 1.3s ease-in-out infinite;
+      }
+
+      #boot-shell .boot-shell__wait i:nth-child(2) {
+        animation-delay: 0.18s;
+      }
+
+      #boot-shell .boot-shell__wait i:nth-child(3) {
+        animation-delay: 0.36s;
+      }
+
+      @keyframes boot-shell-dot {
+        0%,
+        100% {
+          opacity: 0.25;
+          transform: translateY(0);
+        }
+
+        50% {
+          opacity: 1;
+          transform: translateY(-3px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #boot-shell {
+          transition: none;
+        }
+
+        #boot-shell .boot-shell__wait i {
+          animation: none;
+          opacity: 0.7;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-DyTaNqmZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B26CxNIz.css">
   </head>
   <body>
+    <div id="boot-shell" aria-hidden="true">
+      <div class="boot-shell__staff">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+      <span class="boot-shell__note">♪</span>
+      <strong class="boot-shell__mark">INKFLOW</strong>
+      <em class="boot-shell__tagline">where language finds its rhythm</em>
+      <span class="boot-shell__wait">
+        <i></i>
+        <i></i>
+        <i></i>
+      </span>
+    </div>
     <div id="root"></div>
   </body>
 </html>
