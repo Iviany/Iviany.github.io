@@ -1,14 +1,14 @@
 {
-  "name": "InkFlow",
-  "short_name": "InkFlow",
-  "description": "A reading-first English language workspace for phone, tablet, and desktop.",
+  "name": "Leafia",
+  "short_name": "Leafia",
+  "description": "A moonlit knowledge space for reading, collecting, and reusing English.",
   "id": "/",
   "start_url": "/library",
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#ffffff",
-  "theme_color": "#eef4f8",
+  "theme_color": "#d7d2e1",
   "categories": ["education", "productivity"],
   "icons": [
     {

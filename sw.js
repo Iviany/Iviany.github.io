@@ -1,4 +1,4 @@
-const CACHE_NAME = "inkflow-shell-v2";
+const CACHE_NAME = "leafia-shell-v1";
 
 self.addEventListener("install", () => {
   self.skipWaiting();
