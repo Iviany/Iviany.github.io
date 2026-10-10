@@ -1,0 +1,2 @@
+import{r as s,f}from"./index-CgPM956I.js";function y({as:l="div",children:n,className:c,onMouseMove:p,spotlightColor:a="rgba(255, 255, 255, 0.34)",...i}){const o=s.useRef(null),u=t=>{const e=o.current;if(e){const r=e.getBoundingClientRect();e.style.setProperty("--mouse-x",`${t.clientX-r.left}px`),e.style.setProperty("--mouse-y",`${t.clientY-r.top}px`),e.style.setProperty("--spotlight-color",a)}p?.(t)};return s.createElement(l,{...i,ref:o,className:f("card-spotlight",c),onMouseMove:u},n)}export{y as S};
+//# sourceMappingURL=SpotlightCard-B-zu7RCm.js.map
