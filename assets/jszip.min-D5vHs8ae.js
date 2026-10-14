@@ -1,2 +1,0 @@
-import{b as p}from"./index-CfgGo5sN.js";import{r as a}from"./jszip.min-BckR_JsR.js";function f(t,n){for(var o=0;o<n.length;o++){const e=n[o];if(typeof e!="string"&&!Array.isArray(e)){for(const r in e)if(r!=="default"&&!(r in t)){const i=Object.getOwnPropertyDescriptor(e,r);i&&Object.defineProperty(t,r,i.get?i:{enumerable:!0,get:()=>e[r]})}}}return Object.freeze(Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}))}var s=a();const c=p(s),l=f({__proto__:null,default:c},[s]);export{l as j};
-//# sourceMappingURL=jszip.min-D5vHs8ae.js.map
